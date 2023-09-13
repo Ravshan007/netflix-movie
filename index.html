@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inspiration&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="nav">
+        <div class="nav__left">
+            <img class="nav_logo" src="./img/pngwing.png" alt="">
+            <ul>
+                <li>
+                    <a href="#">HOME</a>
+                </li>
+                <li>
+                    <a href="#">TV-SHOWS</a>
+                </li>
+                <li>
+                    <a href="#">MOVIES</a>
+                </li>
+                <li>
+                    <a href="#">NEW</a>
+                </li>
+                <li>
+                    <a href="#">POPULAR</a>
+                </li>
+            </ul>
+        </div>
+        <div class="nav__right">
+            <select name="" id="">
+                <option value="Countries">Countries</option>
+                <option value="England">England</option>
+                <option value="America">America</option>
+                <option value="Uzbekistan">Uzbekistan</option>
+            </select>
+            <input type="search" placeholder="Search">
+        </div>
+    </nav>
+    <!-- Banner -->
+    <div class="wrapper">
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hollywood movies -->
+        <div class="hollywood">
+            <h3>Hollywood Movies</h3>
+            <div class="holly">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Trending -->
+        <div class="trending">
+            <h3>Trending Now</h3>
+            <div class="trend">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./main.js"></script>
+
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+        });
+    </script>
+
+</body>
+
+</html>
