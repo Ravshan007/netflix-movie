@@ -28,7 +28,7 @@ fetch(
             $a2.href = "info.html";
             $a2.className = 'a2'
             $a2.innerHTML = 'Play'
-            $a.href = 'info.html'
+            $a.href = `./info.html?movieId=${movie.id}`
             $a.innerHTML = 'More Info'
             $div.appendChild($h1);
             $div.appendChild($a2)
@@ -74,5 +74,53 @@ fetch("https:api.themoviedb.org/3/discover/movie?&with_genres=28", options)
 
             $div.appendChild($img);
             trend.appendChild($div);
+        });
+    });
+
+// Trending
+const adults = document.querySelector(".adults");
+
+fetch("https://api.themoviedb.org/3/discover/movie?&with_genres=12", options)
+    .then((res) => res.json())
+    .then((data) => {
+        console.log(data);
+        data.results.forEach((holly) => {
+            const url = "https://image.tmdb.org/t/p/original/";
+            const $div = document.createElement("div");
+            const $img = document.createElement("img");
+            $img.src = url + holly.backdrop_path;
+            $div.appendChild($img);
+            adults.appendChild($div);
+    });
+});
+// Kids
+const kids = document.querySelector(".kids");
+
+fetch("https://api.themoviedb.org/3/discover/movie?&with_genres=35", options)
+    .then((res) => res.json())
+    .then((data) => {
+        data.results.forEach((holly) => {
+            const url = "https://image.tmdb.org/t/p/original/";
+            const $div = document.createElement("div");
+            const $img = document.createElement("img");
+            $img.src = url + holly.backdrop_path;
+            $div.appendChild($img);
+            kids.appendChild($div);
+    });
+});
+
+// Shows
+const shows = document.querySelector(".shows");
+
+fetch("https://api.themoviedb.org/3/discover/movie?&with_genres=16", options)
+    .then((res) => res.json())
+    .then((data) => {
+        data.results.forEach((holly) => {
+        const url = "https://image.tmdb.org/t/p/original/";
+        const $div = document.createElement("div");
+        const $img = document.createElement("img");
+        $img.src = url + holly.backdrop_path;
+        $div.appendChild($img);
+        shows.appendChild($div);
         });
     });

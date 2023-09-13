@@ -146,7 +146,6 @@ ul {
 
 .holly {
   margin-top: -100px;
-
 }
 
 .trend {
@@ -154,7 +153,10 @@ ul {
 }
 
 .holly,
-.trend {
+.trend,
+.adults,
+.kids,
+.shows {
   position: relative;
   overflow-x: auto;
   width: 100%;
@@ -163,11 +165,19 @@ ul {
   z-index: 5;
   height: 320px;
 }
-.trend {
+
+.trend,
+.adults,
+.kids,
+.shows {
   height: 220px;
 }
+
 .holly::-webkit-scrollbar,
-.trend::-webkit-scrollbar {
+.trend::-webkit-scrollbar,
+.adults::-webkit-scrollbar,
+.kids::-webkit-scrollbar,
+.shows::-webkit-scrollbar {
   display: none;
 }
 
@@ -176,7 +186,8 @@ ul {
   height: 300px;
   object-fit: cover;
 }
-.holly h4{
+
+.holly h4 {
   color: #fff;
   position: absolute;
   bottom: 30px;
@@ -186,7 +197,11 @@ ul {
   font-size: 20px;
   z-index: 10;
 }
-.trend img {
+
+.trend img,
+.adults img,
+.kids img,
+.shows img {
   width: 320px;
   height: 200px;
   object-fit: cover;
@@ -201,9 +216,27 @@ ul {
   color: #fff;
 }
 
-.trending h3 {
+.for-adults {
+  position: relative;
+  margin: 40px 0;
+}
+
+.for-kids h3,
+.tv-shows h3 {
+  font-size: 22px;
+  margin: 20px 0 20px 30px;
+  color: #fff;
+}
+
+.for-adults h3, .trending h3 {
   font-size: 22px;
   margin-left: 30px;
   color: #fff;
-  margin-top: 30px;
+  margin-top: 20px;
 }
+
+/* .trending h3{
+  color: #fff;
+  margin-left: 30px;
+
+} */
